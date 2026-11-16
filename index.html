@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MUSE Clock みんなのギャラリー</title>
+<meta name="description" content="デスクトップ時計「MUSE Clock」を使ってくださっている読者の時計と、自作背景を紹介するギャラリーページです。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MUSE Clock みんなのギャラリー">
+<meta property="og:description" content="読者の時計と、自作背景の紹介ページ">
+<meta property="og:url" content="https://jkj7vv2nd7-lang.github.io/muse-clock-gallery/">
+<meta property="og:image" content="https://jkj7vv2nd7-lang.github.io/muse-clock-gallery/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+  :root{
+    --bg:#faf3e3; --panel:#fffdf7; --ink:#4a3018; --sub:#7a6248; --line:#e3d3ae;
+    --accent:#b4713b; --accent-soft:#f3e5c8; --link:#8a5a24;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; line-height:1.75; }
+  .wrap{ max-width:760px; margin:0 auto; padding:20px 16px calc(56px + env(safe-area-inset-bottom)); }
+  header{ text-align:center; padding:14px 0 6px; }
+  header img{ width:110px; height:110px; }
+  h1{ font-size:1.7rem; margin:8px 0 2px; letter-spacing:.03em; }
+  .sub{ color:var(--sub); margin:0 0 6px; font-size:.98rem; }
+  section{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px; margin-top:18px; }
+  h2{ font-size:1.25rem; margin:0 0 8px; padding-bottom:6px; border-bottom:2px solid var(--accent-soft); }
+  h2 .en{ color:var(--accent); font-size:.85rem; margin-left:.5em; letter-spacing:.08em; }
+  .empty{ background:var(--accent-soft); border-radius:12px; padding:14px 16px; }
+  .empty b{ display:block; font-size:1.05rem; margin-bottom:4px; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:14px; margin-top:12px; }
+  .work{ border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#fff; }
+  .work img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; background:#f5eedd; }
+  .work .meta{ padding:10px 12px; }
+  .work .title{ font-weight:700; }
+  .work .author{ color:var(--sub); font-size:.88rem; }
+  .work .comment{ font-size:.95rem; margin-top:4px; white-space:pre-wrap; }
+  .guide{ margin-top:12px; }
+  .guide li{ margin:4px 0; }
+  .links{ display:grid; gap:12px; margin-top:12px; }
+  .link-card{ display:block; border:1px solid var(--line); border-radius:12px; padding:14px 16px; background:#fff; color:var(--ink); text-decoration:none; }
+  .link-card b{ color:var(--link); font-size:1.05rem; }
+  .link-card span{ display:block; color:var(--sub); font-size:.92rem; margin-top:2px; }
+  .link-card:active{ background:var(--accent-soft); }
+  footer{ text-align:center; color:var(--sub); font-size:.88rem; margin-top:26px; }
+  a{ color:var(--link); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="icon-512.png" alt="MUSE Clockの時計アイコン">
+    <h1>MUSE Clock みんなのギャラリー</h1>
+    <p class="sub">デスクトップで回る小さな時計「MUSE Clock」を使ってくださっている皆さんの、<br>時計の様子と自作背景を紹介するページです。</p>
+  </header>
+
+  <section>
+    <h2>読者のMUSE Clock <span class="en">MY CLOCK</span></h2>
+    <div id="clocks"></div>
+    <div class="empty" id="clocks-howto">
+      <b>あなたの時計も紹介させてください</b>
+      お使いのMUSE Clockのスクリーンショットと一言（背景や時報の声の感想など）を送っていただければ、このページで紹介します。送り先は、note販売記事のコメント欄、またはThreadsの投稿への返信でお願いします。
+    </div>
+  </section>
+
+  <section>
+    <h2>自作背景の紹介 <span class="en">BACKGROUNDS</span></h2>
+    <div id="backgrounds"></div>
+    <div class="empty" id="backgrounds-howto">
+      <b>自作の背景もお待ちしています</b>
+      MUSE Clockの背景に使った画像を送っていただければ、こちらで紹介します（送り先は上のコーナーと同じです）。これから作る方の目安に、推奨サイズを下にまとめました。
+    </div>
+    <ul class="guide">
+      <li><b>推奨サイズ</b>：小 480×480以上／中 640×640以上／大 840×840以上（時計の大きさ設定に合わせた目安です）</li>
+      <li><b>形</b>：正方形がおすすめです。背景は時計の内側の円いっぱいに合わせて表示されるので、四隅は丸く切り取られます</li>
+      <li><b>絵柄</b>：中心に大切なものがある絵は、針やキャラクターと重なります。中心は穏やかな絵柄のものが向いています</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>リンク集 <span class="en">LINKS</span></h2>
+    <div class="links">
+      <a class="link-card" href="https://github.com/jkj7vv2nd7-lang/muse-clock/releases/tag/v0.1">
+        <b>無料版 v0.1 をダウンロード（GitHub）</b>
+        <span>基本の時計が無料で試せます。MUSEClock.exe をダウンロードして実行してください。</span>
+      </a>
+      <a class="link-card" href="https://note.com/novel_violet9394/n/n52926d26c60f">
+        <b>販売記事（note）― フル機能版 v1.0</b>
+        <span>時報の声7種・背景5種・重なり順や自動起動など、フル機能版のご案内です。読者の紹介コーナー「みなさんの MUSE Clock」はこちらにあります。</span>
+      </a>
+      <a class="link-card" href="https://note.com/novel_violet9394/n/n69a4705ca459">
+        <b>無料版の紹介記事（note）</b>
+        <span>無料版 v0.1 の紹介記事です。使い方の流れはこちらでどうぞ。</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    MUSE Clock みんなのギャラリー<br>
+    不具合が出るかもしれません。実際にご使用の際に不具合がありましたらコメント欄からお知らせください。
+  </footer>
+</div>
+
+<script>
+"use strict";
+/* ================================================================
+   作品データ（投稿が集まったら、ここに1件ずつ追加します）
+   clocks:      { img: "img/ファイル名", name: "投稿者名", comment: "一言" }
+   backgrounds: { img: "img/ファイル名", title: "背景の題名", author: "作者名", comment: "一言" }
+   画像ファイルは img フォルダに入れてください。
+   ================================================================ */
+const GALLERY = {
+  clocks: [
+    /* 例： { img: "img/clock-1.jpg", name: "○○さん", comment: "机の片隅で回っています" }, */
+  ],
+  backgrounds: [
+    /* 例： { img: "img/bg-1.jpg", title: "春の庭", author: "○○さん", comment: "中サイズで作りました" }, */
+  ],
+};
+</script>
+<script>
+"use strict";
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+function renderWorks(elId, items, kind) {
+  const el = document.getElementById(elId);
+  if (!items.length) {
+    el.innerHTML = "<div class='empty'><b>最初の紹介をお待ちしています</b>まだ投稿はありません。第一号の紹介を、ぜひお寄せください。</div>";
+    return;
+  }
+  el.innerHTML = "<div class='grid'>" + items.map(w => {
+    if (kind === "clock") {
+      return "<div class='work'><img src='" + esc(w.img) + "' alt='読者のMUSE Clock'>" +
+        "<div class='meta'><div class='title'>" + esc(w.name) + "</div>" +
+        "<div class='comment'>" + esc(w.comment) + "</div></div></div>";
+    }
+    return "<div class='work'><img src='" + esc(w.img) + "' alt='自作背景'>" +
+      "<div class='meta'><div class='title'>" + esc(w.title) + "</div>" +
+      "<div class='author'>" + esc(w.author) + "</div>" +
+      "<div class='comment'>" + esc(w.comment) + "</div></div></div>";
+  }).join("") + "</div>";
+}
+renderWorks("clocks", GALLERY.clocks, "clock");
+renderWorks("backgrounds", GALLERY.backgrounds, "background");
+</script>
+</body>
+</html>
